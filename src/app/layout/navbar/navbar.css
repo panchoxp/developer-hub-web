@@ -1,0 +1,97 @@
+.side-navbar {
+  position: fixed;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.nav-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-dot {
+  position: relative;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  background-color: #a7b0ba;
+
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease;
+
+  text-decoration: none;
+}
+
+.nav-dot:hover {
+  transform: scale(1.4);
+  background-color: #4f8cff;
+}
+
+.nav-dot.active {
+  width: 14px;
+  height: 14px;
+  background-color: #4f8cff;
+}
+
+.nav-label {
+  position: absolute;
+
+  right: 1.5rem;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  padding: 0.35rem 0.7rem;
+
+  border-radius: 6px;
+
+  background: rgba(17, 24, 32, 0.9);
+  color: #f5f7fa;
+
+  font-size: 0.8rem;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-dot:hover .nav-label {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-4px);
+}
+.nav-indicator {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-indicator::before {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  bottom: 5px;
+
+  width: 1px;
+
+  background: rgba(167, 176, 186, 0.25);
+
+  z-index: -1;
+}
