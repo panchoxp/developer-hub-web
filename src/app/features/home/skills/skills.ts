@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { SectionHeading } from '../../../shared/components/section-heading/section-heading';
 
 @Component({
   selector: 'app-skills',
-  imports: [],
+  standalone: true,
+  imports: [SectionHeading],
   templateUrl: './skills.html',
-  styleUrl: './skills.css',
+  styleUrl: './skills.css'
 })
 export class Skills {}

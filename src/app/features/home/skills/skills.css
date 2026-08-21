@@ -10,32 +10,7 @@
 
   color: #f5f7fa;
 }
- /*encabezado*/
- .section-heading {
-  display: flex;
-
-  align-items: center;
-
-  gap: 1rem;
-
-  margin-bottom: 3rem;
-}
-
-.section-number {
-  font-family: monospace;
-
-  font-size: 0.75rem;
-
-  color: #4f8cff;
-}
-
-.section-label {
-  font-size: 0.75rem;
-
-  letter-spacing: 0.3em;
-
-  color: #a7b0ba;
-}
+ 
 /*introduccion*/
 .skills-intro {
   display: flex;

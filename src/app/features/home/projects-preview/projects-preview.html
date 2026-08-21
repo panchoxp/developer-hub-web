@@ -1,0 +1,50 @@
+<section id="projects" class="projects-section">
+
+  <div class="container">
+
+    <app-section-heading
+      number="03"
+      title="PROYECTOS">
+    </app-section-heading>
+
+
+    <div class="projects-intro">
+
+      <h2>
+        Proyectos que
+        <span>convierten ideas en software.</span>
+      </h2>
+
+      <p>
+        Una selección de proyectos en los que he aplicado
+        diferentes tecnologías y conceptos de desarrollo.
+      </p>
+
+    </div>
+
+
+    <div class="projects-showcase">
+
+      @for (project of projects; track project.id) {
+
+        <app-project-card
+          [project]="project">
+        </app-project-card>
+
+      }
+
+    </div>
+
+
+    <div class="projects-footer">
+
+      <a routerLink="/projects">
+        VER TODOS LOS PROYECTOS
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
