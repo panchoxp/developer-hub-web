@@ -1,0 +1,609 @@
+<main class="project-detail">
+
+    <!-- 01 HERO -->
+    <section class="project-hero">
+
+        <div class="project-hero-content">
+
+            <!-- Header -->
+            <div class="project-hero-header">
+
+                <app-section-heading number="01" title="PROJECT">
+                </app-section-heading>
+
+                <span class="project-hero-index">
+                    {{ project?.id }}
+                </span>
+
+            </div>
+
+
+            <!-- Main information -->
+            <div class="project-hero-main">
+
+                <div class="project-title-wrapper">
+
+                    <span class="project-label">
+                        Featured Project
+                    </span>
+
+                    <h1 class="project-title">
+                        {{ project?.title }}
+                    </h1>
+
+                </div>
+
+                <div class="project-hero-description">
+
+                    <p>
+                        {{ project?.description }}
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bottom information -->
+            <div class="project-hero-footer">
+
+                <div class="project-technologies">
+
+                    <span class="project-meta-label">
+                        Technologies
+                    </span>
+
+                    <div class="technology-list">
+
+                        @for (
+                        technology of project?.technologies;
+                        track technology
+                        ) {
+
+                        <span class="technology-tag">
+                            {{ technology }}
+                        </span>
+
+                        }
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-links">
+
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
+
+                        GitHub
+                        <span>↗</span>
+
+                    </a>
+
+                    <a routerLink="/" class="project-link">
+
+                        Live Demo
+                        <span>↗</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 02 OVERVIEW -->
+    <section class="project-section project-overview">
+
+        <div class="overview-container">
+
+            <!-- Section header -->
+            <div class="section-header">
+
+                <app-section-heading number="02" title="OVERVIEW">
+                </app-section-heading>
+
+            </div>
+
+
+            <!-- Main content -->
+            <div class="overview-grid">
+
+                <!-- What is it -->
+                <article class="overview-card overview-card-main">
+
+                    <div class="overview-card-top">
+
+                        <span class="content-label">
+                            ¿QUÉ ES?
+                        </span>
+
+                        <span class="overview-card-number">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <div class="overview-card-content">
+
+                        <h2>
+                            Un portfolio construido
+                            como proyecto de software.
+                        </h2>
+
+                        <p>
+                            {{ project?.overview?.whatIsIt }}
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Objective -->
+                <article class="overview-card overview-card-secondary">
+
+                    <div class="overview-card-top">
+
+                        <span class="content-label">
+                            OBJETIVO
+                        </span>
+
+                        <span class="overview-card-number">
+                            02
+                        </span>
+
+                    </div>
+
+
+                    <div class="overview-card-content">
+
+                        <p>
+                            {{ project?.overview?.objective }}
+                        </p>
+
+                    </div>
+
+
+                    <div class="overview-card-decoration">
+                        <span></span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 04 ARCHITECTURE -->
+    <section class="project-section project-architecture">
+
+        <app-section-heading number="03" title="ARCHITECTURE">
+        </app-section-heading>
+
+
+        <div class="architecture-content">
+
+
+            <!-- INTRO -->
+            <div class="architecture-intro">
+
+                <span class="content-label">
+                    ESTRUCTURA
+                </span>
+
+                <h2>
+                    {{ project?.architecture?.title }}
+                </h2>
+
+                <p>
+                    {{ project?.architecture?.description }}
+                </p>
+
+            </div>
+
+
+            <!-- TREE -->
+            <div class="architecture-tree">
+
+
+                <!-- ROOT -->
+                <div class="tree-root">
+
+                    <span>
+                        {{ project?.title }}
+                    </span>
+
+                </div>
+
+
+                <!-- BRANCHES -->
+                <div class="tree-branches">
+
+                    @for (
+                    area of project?.architecture?.areas;
+                    track area.number
+                    ) {
+
+                    <article class="architecture-card">
+
+                        <div class="architecture-card-header">
+
+                            <span class="architecture-number">
+                                {{ area.number }}
+                            </span>
+
+                            <span class="architecture-label">
+                                MODULE
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            {{ area.name }}
+                        </h3>
+
+
+                        <p>
+                            {{ area.description }}
+                        </p>
+
+
+                        <code>
+                            {{ area.path }}
+                        </code>
+
+                    </article>
+
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 05 DEVELOPMENT -->
+    <section class="project-section">
+
+        <app-section-heading number="04" title="DEVELOPMENT">
+        </app-section-heading>
+
+
+        <div class="development-timeline">
+
+            @for (
+            step of project?.development;
+            track step.number
+            ) {
+
+            <article class="timeline-item">
+
+                <span class="timeline-number">
+                    {{ step.number }}
+                </span>
+
+                <div>
+
+                    <span class="content-label">
+                        {{ step.category }}
+                    </span>
+
+                    <h3>
+                        {{ step.title }}
+                    </h3>
+
+                    <p>
+                        {{ step.description }}
+                    </p>
+
+                </div>
+
+            </article>
+
+            }
+
+        </div>
+
+
+        <div class="development-timeline">
+
+            <article class="timeline-item">
+
+                <span class="timeline-number">
+                    01
+                </span>
+
+                <div>
+
+                    <span class="content-label">
+                        FUNDAMENTOS
+                    </span>
+
+                    <h3>
+                        Configuración inicial
+                    </h3>
+
+                    <p>
+                        Creación del proyecto Angular, configuración del entorno,
+                        Git y estructura inicial de la aplicación.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <span class="timeline-number">
+                    02
+                </span>
+
+                <div>
+
+                    <span class="content-label">
+                        ARQUITECTURA
+                    </span>
+
+                    <h3>
+                        Organización del proyecto
+                    </h3>
+
+                    <p>
+                        Separación de core, shared, layout y features para
+                        establecer una estructura mantenible.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <span class="timeline-number">
+                    03
+                </span>
+
+                <div>
+
+                    <span class="content-label">
+                        FRONTEND
+                    </span>
+
+                    <h3>
+                        Desarrollo de la interfaz
+                    </h3>
+
+                    <p>
+                        Implementación del navbar, hero, secciones informativas,
+                        habilidades y showcase de proyectos.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <span class="timeline-number">
+                    04
+                </span>
+
+                <div>
+
+                    <span class="content-label">
+                        PROJECTS
+                    </span>
+
+                    <h3>
+                        Sistema de proyectos
+                    </h3>
+
+                    <p>
+                        Implementación de modelos, tarjetas reutilizables,
+                        navegación y páginas individuales para cada proyecto.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="timeline-item planned">
+
+                <span class="timeline-number">
+                    05
+                </span>
+
+                <div>
+
+                    <span class="content-label">
+                        FUTURO
+                    </span>
+
+                    <h3>
+                        Backend y persistencia
+                    </h3>
+
+                    <p>
+                        Integración de una API REST desarrollada con Spring Boot
+                        y una base de datos PostgreSQL.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- 06 LEARNINGS -->
+    <section class="project-section">
+
+        <app-section-heading number="05" title="LEARNINGS">
+        </app-section-heading>
+
+
+        <div class="learnings-intro">
+
+            <span class="content-label">
+                APRENDIZAJES
+            </span>
+
+            <h2>
+                Lo que este proyecto me está enseñando.
+            </h2>
+
+            <p>
+                Más allá de las tecnologías utilizadas, el desarrollo del
+                proyecto me permite aplicar conceptos de arquitectura,
+                reutilización y organización del código.
+            </p>
+
+        </div>
+
+
+        <div class="learnings-grid">
+
+            @for (
+            learning of project?.learnings;
+            track learning.number
+            ) {
+
+            <article class="learning-card">
+
+                <span>
+                    {{ learning.number }}
+                </span>
+
+                <h3>
+                    {{ learning.title }}
+                </h3>
+
+                <p>
+                    {{ learning.description }}
+                </p>
+
+            </article>
+
+            }
+
+        </div>
+
+    </section>
+
+
+    <!-- 07 STATUS -->
+    <section class="project-status">
+
+
+        <div class="status-content">
+            <app-section-heading number="06" title="STATUS">
+            </app-section-heading>
+
+            <span class="content-label">
+                PROJECT STATUS
+            </span>
+
+            <h2>
+                Un proyecto en evolución.
+            </h2>
+
+            <div class="status-list">
+
+                <div class="status-item">
+
+                    <span class="status-indicator active"></span>
+
+                    <span class="status-name">
+                        Frontend
+                    </span>
+
+                    <span class="status-value">
+                        In development
+                    </span>
+
+                </div>
+
+                <div class="status-item">
+
+                    <span class="status-indicator"
+                        [class.active]="project?.status?.frontend === 'in-development'"></span>
+
+                    <span class="status-name">
+                        Frontend
+                    </span>
+
+                    <span class="status-value">
+                        {{ getStatusLabel(project?.status?.frontend ?? '') }}
+                    </span>
+
+                </div>
+
+
+                <div class="status-item">
+
+                    <span class="status-indicator planned"></span>
+
+                    <span class="status-name">
+                        Database
+                    </span>
+
+                    <span class="status-value">
+                        Planned
+                    </span>
+
+                </div>
+
+
+                <div class="status-item">
+
+                    <span class="status-indicator planned"></span>
+
+                    <span class="status-name">
+                        Mobile
+                    </span>
+
+                    <span class="status-value">
+                        Planned
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-footer">
+
+                <span>
+                    Last update
+                </span>
+
+                <span>
+                    2026
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
