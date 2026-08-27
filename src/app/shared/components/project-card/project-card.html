@@ -2,6 +2,7 @@
 
     <img [src]="project().image" [alt]="project().title">
 
+
     <div class="project-content">
 
         <h3>
@@ -23,6 +24,17 @@
             }
 
         </div>
+        <a [routerLink]="project().route">
+
+            <span>
+                VER PROYECTO
+            </span>
+
+            <span>
+                ↗
+            </span>
+
+        </a>
 
     </div>
 

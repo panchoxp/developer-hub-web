@@ -15,5 +15,7 @@ export interface Project {
   demo?: string;
 
   featured: boolean;
+  
+  route?: string;
 
 }

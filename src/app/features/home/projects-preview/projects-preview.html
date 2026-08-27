@@ -51,12 +51,16 @@
 
     </div>
 
-
     <div class="projects-footer">
 
-      <a routerLink="/projects">
-        VER TODOS LOS PROYECTOS
-        <span>→</span>
+      <a class="projects-footer-link" [routerLink]="currentProject.route">
+
+        VER PROYECTO ACTUAL
+
+        <span>
+          ↗
+        </span>
+
       </a>
 
     </div>

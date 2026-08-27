@@ -9,6 +9,7 @@ export const PROJECT_DETAILS: ProjectDetail[] = [
 
     description:
       'Portfolio personal desarrollado con Angular y TypeScript como demostración de mis conocimientos en desarrollo de software.',
+      
 
     technologies: [
       'Angular',

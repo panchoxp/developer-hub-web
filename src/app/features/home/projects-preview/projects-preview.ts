@@ -49,7 +49,9 @@ export class ProjectsPreview {
         'Bootstrap'
       ],
       image: 'assets/projects/developer-hub.webp',
+      route: '/projects/developer-hub',
       featured: true
+      
     },
 
     {
@@ -63,6 +65,7 @@ export class ProjectsPreview {
         'PostgreSQL'
       ],
       image: 'assets/projects/spring-api.webp',
+      route: '/projects/spring-api',
       featured: true
     },
     {
@@ -75,6 +78,7 @@ export class ProjectsPreview {
         'TypeScript'
       ],
       image: 'assets/projects/mobile-app.webp',
+      route: '/projects/mobile-app',
       featured: true
     }
 
