@@ -2,29 +2,22 @@
 
   <div class="nav-indicator">
 
-    <a class="nav-dot active" href="#hero">
-      <span class="nav-label">Inicio</span>
-    </a>
+    @for (section of sections; track section.id) {
 
-    <a class="nav-dot" href="#about">
-      <span class="nav-label">Sobre mí</span>
-    </a>
+      <button
+        type="button"
+        class="nav-dot"
+        [class.active]="activeSection() === section.id"
+        (click)="navigateToSection($event, section.id)"
+      >
 
-    <a class="nav-dot" href="#skills">
-      <span class="nav-label">Tecnologías</span>
-    </a>
+        <span class="nav-label">
+          {{ section.label }}
+        </span>
 
-    <a class="nav-dot" href="#projects">
-      <span class="nav-label">Proyectos</span>
-    </a>
+      </button>
 
-    <a class="nav-dot" href="#experience">
-      <span class="nav-label">Formación</span>
-    </a>
-
-    <a class="nav-dot" href="#contact">
-      <span class="nav-label">Contacto</span>
-    </a>
+    }
 
   </div>
 
