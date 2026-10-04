@@ -53,7 +53,7 @@ export class ProjectsPreview {
       featured: true
       
     },
-
+/*
     {
       id: 'spring-api',
       title: 'Spring API',
@@ -81,7 +81,7 @@ export class ProjectsPreview {
       route: '/projects/mobile-app',
       featured: true
     }
-
+*/
   ];
 
 }

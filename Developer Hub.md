@@ -320,7 +320,7 @@ Entre las funcionalidades y mejoras planificadas se encuentran:
 Clonar el repositorio:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/panchoxp/developer-hub-web.git
 ```
 
 Acceder al proyecto:
@@ -353,26 +353,15 @@ http://localhost:4200/
 
 ---
 
-## 🌐 Demo
-
-Portfolio:
-
-**<URL_DEL_PORTFOLIO>**
-
-Repositorio:
-
-**<URL_DEL_REPOSITORIO>**
-
----
 
 ## 📫 Contacto
 
 **Francisco Sucuy**  
 Tecnólogo en Programación · Desarrollador de Software
 
-- GitHub: <URL_GITHUB>
-- LinkedIn: <URL_LINKEDIN>
-- Email: <CORREO>
+- GitHub: https://github.com/panchoxp
+- LinkedIn: https://www.linkedin.com/in/francisco-sucuy-119895255/
+- Email: francisco_smfd@hotmail.es
 
 ---
 
