@@ -23,9 +23,9 @@ export const PROJECT_DETAILS: ProjectDetail[] = [
 
     image: 'assets/projects/developer-hub.png',
 
-    github: '#',
+    github: 'https://github.com/panchoxp/developer-hub-web',
 
-    demo: '#',
+    demo: 'https://panchoxp.github.io/developer-hub-web/home',
 
     featured: true,
 
